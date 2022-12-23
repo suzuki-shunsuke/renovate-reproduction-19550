@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "branchConcurrentLimit": 0,
+  "regexManagers": [
+    {
+      "fileMatch": ["hello\\.txt"],
+      "matchStrings": [
+        "(?<depName>[^,]+),(?<currentDigest>[^,]+?),(?<currentValue>[^,]+?)\\n"
+      ],
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
